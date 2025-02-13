@@ -1,0 +1,55 @@
+<html>
+  <head>
+  </head>
+  <body>
+      <script>
+        // var a = 10;  // |int|
+        // var b = "abc";
+        // var c = true;
+        // var d = null; // very very rarely you set the value to null
+        // var e = undefined; // never written by developer; anti pattern
+        // var f;
+        // // if(d === null) {
+        // //   d = 20;
+        // // } else {
+        // //   d = 30;
+        // // }
+        // // var x = 20;
+        // // x = null;
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+        // console.log(d);
+        // console.log(e);
+        // console.log(f);
+        // console.log(typeof(a)) // typeof("number")
+        // console.log(typeof(b)) // typeof("string")
+        // console.log(typeof(c)) 
+        // console.log(typeof(d))
+        // console.log(typeof(f))
+        // console.log(typeof(typeof(f)));  // typeof("undefined")
+        var a = 10;
+        // 10 == 10
+        if(a == "10") { 
+          console.log("1st");
+        } else {
+          console.log("2nd");
+        }
+        var d = "abc";
+        var e = "def";
+        var f = 2;
+        var x = true;
+        console.log(d + e); // concatenation
+        console.log(d + f); "abc" + "2";
+        console.log(d + x);
+        console.log(+"2"); // unary +
+        console.log(+"abc"); // NaN not a number
+
+        +"abc" + 2 + 3 + "10" // (+"abc" + 2) + 3 + "10"
+        //  (NaN + 2) + 3 + "10"
+        // (NaN +3) + "10"
+        // NaN + "10"
+      </script>
+      <!-- <script src="index.js"> </script> -->
+  </body>
+</html>
