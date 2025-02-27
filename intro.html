@@ -1,17 +1,17 @@
 <html>
-  <head>
-  </head>
-  <body>
-      <script>
-        // var a = 10;  // |int|
-        // var b = "abc";
-        // var c = true;
-        // var d = null; // very very rarely you set the value to null
-        // var e = undefined; // never written by developer; anti pattern
-        // var f;
-        // // if(d === null) {
-        // //   d = 20;
-        // // } else {
+<head>
+</head>
+<body>
+  <script>
+    // var a = 10;  // |int|
+    // var b = "abc";
+    // var c = true;
+    // var d = null; // very very rarely you set the value to null
+    // var e = undefined; // never written by developer; anti pattern
+    // var f;
+    // // if(d === null) {
+      // //   d = 20;
+      // // } else {
         // //   d = 30;
         // // }
         // // var x = 20;
@@ -44,12 +44,44 @@
         console.log(d + x);
         console.log(+"2"); // unary +
         console.log(+"abc"); // NaN not a number
-
-        +"abc" + 2 + 3 + "10" // (+"abc" + 2) + 3 + "10"
+        let a = 10;
+        function abc(){
+          let a = 20;    
+        }
+        // +"abc" + 2 + 3 + +"10" // (+"abc" + 2) + 3 + "10"
         //  (NaN + 2) + 3 + "10"
         // (NaN +3) + "10"
         // NaN + "10"
+        // "NaN" + "10"
+        // NaN10
+        //  +"2" + 3 + 5 + "abc";
+        
+        function gp() {
+          var a = 20;
+          console.log(a)
+          
+          function parent(){
+            var a = 30;
+            
+            console.log(a)
+            
+            function child(){
+              var a = 40;
+              
+              console.log(a);
+            }
+            child()
+            console.log(a)
+          }
+          parent()
+          console.log(a)
+          
+        }
+        gp()
+
+
+        // 20 30 40 30 20
       </script>
       <!-- <script src="index.js"> </script> -->
-  </body>
-</html>
+    </body>
+    </html>

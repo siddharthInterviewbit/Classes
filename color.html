@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 5rem;
+      }
+
+      .blue {
+        background-color: blue;
+        box-shadow: 0px 0px 6px 5px;
+      }
+
+      .green {
+        background-color: green;
+        box-shadow: 0px 0px 6px 5px;
+      }
+
+      .red {
+        background-color: red;
+        box-shadow: 0px 0px 6px 5px;
+      }
+
+      .card {
+        border: 1px solid;
+        height: 10rem;
+        width: 10rem;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+        <div class = "card" data-color = "blue"></div>  
+        <div class = "card" data-color = "red"></div>
+        <div class = "card" data-color = "blue"></div>
+        <div class = "card" data-color = "red"></div>
+        <div class = "card" data-color = "red"></div>
+        <div class = "card" data-color = "blue"></div>
+        <div class = "card" data-color = "green"></div>
+        <div class = "card" data-color = "blue"></div>
+        <div class = "card" data-color = "green"></div>
+        <div class = "card" data-color = "blue"></div>
+    <script>
+
+        let cardsNodeList = document.querySelectorAll(".card");
+        for(let i=0; i< cardsNodeList.length; i++) {
+            cardsNodeList[i].addEventListener('dblclick', function(e) {
+                // get that particular element get the data color attribute get 
+                // the value and add to the classlist
+                console.log(e.target);
+                let classToBeAttached = e.target.getAttribute('data-color');
+                console.log(e.target.classList);
+                e.target.classList.add(classToBeAttached);
+            })
+        }
+
+        // Homework 
+        // You have to create each of the 10 divs using javascript 
+        // add data-color attribute randomly from a list of these colors [red, blue, green];
+    </script>
+  </body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bold {
+            font-size: 34px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="btn">click me</button>
+    </div>
+</body>
+
+<script>
+    // addEventListener(event, callback)
+    // event - Click, mouseover, mouseout, mousein, change
+    document.getElementById("btn").addEventListener('click', function() {
+        console.log("button clicked");
+        let divElem = document.createElement("div");
+        divElem.innerText = "Hello Class";
+        document.body.appendChild(divElem);
+    });
+</script>
+</html>

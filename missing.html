@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>8</li>
+            <li>9</li>
+        </ul> 
+    </div>
+</body>
+
+<script>
+    let ourList = document.querySelector('ul');
+    let allItems = document.querySelectorAll('li');
+    console.log(allItems);
+    // insert before 6th
+    // find the missing element(HW)
+
+    let indexThatHas8 = allItems[6];
+    let sevenElement = document.createElement('li');
+    sevenElement.innerText = "7";
+    ourList.insertBefore(sevenElement, indexThatHas8);
+    console.log(typeof(indexThatHas8));
+    // append
+    // appendChild
+    // 
+</script>
+</html>
