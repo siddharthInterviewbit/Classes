@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF - 8" />
+  <meta http-equiv = "X - UA - Compatible" content = "IE = edge" />
+  <meta name = "viewport" content = "width = device-width, initial-scale = 1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <div id = "doubleHolder">
+    <button class = "double">double</button>
+
+  </div>
+  
+  <script>
+    let parent = document.getElementById('doubleHolder');
+    function clickHandler(e) {
+      var btn = createElm('button', 'double', 'double'); 
+      var btn2 = createElm('button', 'double', 'double');
+
+      appendChld(parent, btn);
+      appendChld(parent, btn2);
+
+      addListener(btn);
+      addListener(btn2);
+
+      parent.removeChild(e.target);
+    }
+
+    function appendChld(parent, child) {
+      parent.appendChild(child);
+    }
+
+    function createElm(type, cls, text) {
+      let btn = document.createElement(type);
+      btn.setAttribute('class', cls);
+      btn.innerText = text;
+    }
+
+    document.querySelector('.double').addEventListener('click', function(e) {
+      clickHandler(e);
+    })
+
+    function addListener(elm) {
+      elm.addEventListener('click', function(e) {
+        clickHandler(e);
+      })
+    }
+
+  </script>
+</body>
+</html>
